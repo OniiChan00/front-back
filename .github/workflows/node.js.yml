@@ -24,7 +24,7 @@ jobs:
     - name: test backend
       run: |
         cd server
-        npm test
+        npm run test
         
     - name: install backend
       run: |

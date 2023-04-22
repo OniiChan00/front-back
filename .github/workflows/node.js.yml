@@ -24,14 +24,17 @@ jobs:
       run: |
         cd project
         npm install --force
-    - name: install backend
-      run: |
-        cd server
-        npm install --force
+    
     - name: test frontend
       run: |
         cd project
         npm test
+    
+    - name: install backend
+      run: |
+        cd server
+        npm install --force
+    
     - name: test backend
       run: |
         cd server

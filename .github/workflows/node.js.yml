@@ -20,15 +20,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
-    - name: install frontend
-      run: |
-        cd project
-        npm install --force
-    
-    - name: test frontend
-      run: |
-        cd project
-        npm test
     
     - name: install backend
       run: |
@@ -39,6 +30,18 @@ jobs:
       run: |
         cd server
         npm test
+
+    - name: install frontend
+      run: |
+        cd project
+        npm install --force
+    
+    - name: test frontend
+      run: |
+        cd project
+        npm test
+    
+
     
     - name: test docker
       run: docker-compose build 

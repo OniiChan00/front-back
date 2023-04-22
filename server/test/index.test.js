@@ -15,7 +15,7 @@ describe("GET /testtoken", () => {
     // const obj = JSON.parse(json)
     // const token = obj.token
     const decoded = jwt.verify(token, secret_key);
-    expect(decoded.user).toBe("phum");
+    expect(decoded.user).toBe("phoo");
   });
 });
 

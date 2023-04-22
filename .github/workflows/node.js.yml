@@ -24,6 +24,8 @@ jobs:
     - name: test backend
       run: |
         cd server
+        npm install
+        npm install jest
         npm run test
         
     - name: install backend

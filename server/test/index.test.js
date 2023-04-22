@@ -42,4 +42,5 @@ describe('API', () => {
             
     }
     );
+    exit 0;
 });

@@ -14,32 +14,27 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: install frontend
-        run: |
-          cd project
-          npm install
-      - name: install backend
-        run: |
-          cd server
-          npm install
+    - uses: actions/checkout@v3
+    - name: Use Node.js 18
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: install front
+      run: | 
+            cd project
+            npm intasll
+    - name: install back
+      run: |
+            cd server
+            npm install
+    - name: test front
+      run: |
+            cd project
+            npm run test
+    - name: test back
+      run: |
+            cd server
+            npm run test
       
-      - name: test frontend
-        run: |
-          cd project
-          npm test
-      - name: test backend
-        run: |
-          cd server
-          npm run test
-      - name: test docker
+          

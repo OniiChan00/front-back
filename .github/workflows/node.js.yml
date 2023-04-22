@@ -26,7 +26,7 @@ jobs:
         cd server
         npm install
         npm install jest
-        npm run test
+        npm run test --detectOpenHandles
         
     - name: install backend
       run: |

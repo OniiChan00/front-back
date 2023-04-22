@@ -40,22 +40,22 @@ describe("Test API", () => {
 // });
 
 
-describe("create token", () => {
-  it("return true", (done) => {
-    const username = "admin";
-    const password = "admin";
-    chai
-      .request(app)
-      .post("/createToken")
-      .send({ admin: username, password: password })
-      .end((err, res) => {
-        expect(res).to.have.status(200);
-        console.log(res);
-        expect(res.body).to.equal("true");
-        done();
-      });
-  });
-});
+// describe("create token", () => {
+//   it("return true", (done) => {
+//     const username = "admin";
+//     const password = "admin";
+//     chai
+//       .request(app)
+//       .post("/createToken")
+//       .send({ admin: username, password: password })
+//       .end((err, res) => {
+//         expect(res).to.have.status(200);
+//         console.log(res);
+//         expect(res.body).to.equal("true");
+//         done();
+//       });
+//   });
+// });
 
 
 

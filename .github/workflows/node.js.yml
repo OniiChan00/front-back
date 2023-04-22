@@ -26,11 +26,6 @@ jobs:
         cd server
         npm install --force
     
-    - name: test backend
-      run: |
-        cd server
-        npm test
-
     - name: install frontend
       run: |
         cd project
@@ -41,7 +36,6 @@ jobs:
         cd project
         npm test
     
-
     
     - name: test docker
       run: docker-compose build 

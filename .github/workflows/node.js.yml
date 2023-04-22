@@ -35,6 +35,11 @@ jobs:
       run: |
         cd project
         npm test
+        
+    - name: test backend
+      run: |
+        cd server
+        npm test
     
     
     - name: test docker

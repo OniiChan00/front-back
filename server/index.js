@@ -63,7 +63,7 @@ app.get('/test', function (req, res, next) {
 })
 
 
-app.get('/login',urlencodedParser,function(req,res,next) {
+app.get('/testtoken',urlencodedParser,function(req,res,next) {
   const token = jwt.sign({user:"phoo"},secret_key)
   res.send(token)
 })

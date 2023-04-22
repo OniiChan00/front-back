@@ -23,7 +23,7 @@ jobs:
     - name: install front
       run: | 
             cd project
-            npm intasll
+            npm intall
     - name: install back
       run: |
             cd server

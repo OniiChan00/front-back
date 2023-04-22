@@ -26,20 +26,6 @@ const pool = mysql.createPool({
                               })
  var app = express();
 
- //check connection
-    pool.getConnection(function(err, connection) {
-        if(err){
-            console.log(err)
-        }
-        else{
-            console.log("Database Connected")
-            console.log(`Host is: ${host}`)
-        }
-    })
-
-
-
-
 
 
 app.use(cors());

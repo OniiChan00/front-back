@@ -23,11 +23,11 @@ jobs:
     - name: install frontend
       run: |
         cd project
-        npm install
+        npm install --force
     - name: install backend
       run: |
         cd server
-        npm install
+        npm install --force
     - name: test frontend
       run: |
         cd project

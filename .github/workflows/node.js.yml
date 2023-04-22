@@ -39,4 +39,7 @@ jobs:
       run: |
         cd server
         npm test
+    
+    - name: test docker
+      run: docker-compose build 
           

@@ -20,21 +20,20 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
-    - name: install front
-      run: | 
-            cd project
-            npm intall
-    - name: install back
+    - name: install frontend
       run: |
-            cd server
-            npm install
-    - name: test front
+        cd project
+        npm install
+    - name: install backend
       run: |
-            cd project
-            npm run test
-    - name: test back
+        cd server
+        npm install
+    - name: test frontend
       run: |
-            cd server
-            npm run test
-      
+        cd project
+        npm test
+    - name: test backend
+      run: |
+        cd server
+        npm test
           
